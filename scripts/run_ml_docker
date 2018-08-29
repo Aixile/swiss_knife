@@ -20,6 +20,20 @@ arg1="${1:-}"
 #######################################
 
 
+docker_extra_args=""
+while (( "$#" )); do
+  case "$1" in
+    --docker-extra-args)
+      docker_extra_args=$2
+      shift 2
+      ;;
+    *) # end argument parsing as early as possible
+      shift
+      break
+  esac
+done
+
+
 docker_tag="local:dev-latest"
 
 cmd="${@:-/bin/bash}"
@@ -30,5 +44,6 @@ nvidia-docker run -it --rm \
   -w "$(pwd)" \
   -e HOME=${HOME} \
   -e CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0} \
+  ${docker_extra_args} \
   "${docker_tag}" \
   $cmd
