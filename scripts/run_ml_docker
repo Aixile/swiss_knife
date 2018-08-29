@@ -28,7 +28,6 @@ while (( "$#" )); do
       shift 2
       ;;
     *) # end argument parsing as early as possible
-      shift
       break
   esac
 done
