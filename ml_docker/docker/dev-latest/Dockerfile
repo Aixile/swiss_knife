@@ -15,7 +15,7 @@ ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 #-------------------------------------------------------------------------------
 RUN apt-get update -y && \
     apt-get install -y \
-        coreutils python3 python3-pip python2 python2-pip \
+        coreutils python3 python3-pip python python-pip \
     && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
