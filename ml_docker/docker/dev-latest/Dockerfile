@@ -34,4 +34,7 @@ RUN pip3 install -U scikit-learn
 RUN pip3 install \
     joblib records babel tabulate python-gflags yapf flake8 absl-py \
     Pillow tqdm h5py
+RUN pip3 install pylint
+RUN pip3 install dm-sonnet
+RUN pip3 install autopep8
 #-------------------------------------------------------------------------------
