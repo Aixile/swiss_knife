@@ -32,4 +32,5 @@ pip install \
 pip install pylint
 pip install dm-sonnet
 pip install autopep8
+pip install tb-nightly
 #-------------------------------------------------------------------------------

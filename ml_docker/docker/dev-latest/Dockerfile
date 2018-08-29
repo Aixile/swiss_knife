@@ -37,4 +37,5 @@ RUN pip3 install \
 RUN pip3 install pylint
 RUN pip3 install dm-sonnet
 RUN pip3 install autopep8
+RUN pip3 install tb-nightly
 #-------------------------------------------------------------------------------
